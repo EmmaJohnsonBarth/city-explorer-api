@@ -37,12 +37,13 @@ app.get('/weather', (request, response) => {
       console.log(error);
       response.status(500).send('Error fetching weather data');
     });
-  })
+}
+);
 
 
 
-  // console.log('from JSON: ', weatherDataToInstant);
-  // let dataToSendFE = new Weather(weatherDataToInstant);
+// console.log('from JSON: ', weatherDataToInstant);
+// let dataToSendFE = new Weather(weatherDataToInstant);
 //   try {
 //     let weatherObjects = weatherDataToInstant.data.map((day) => {
 //       return new WeatherForecast(day);
