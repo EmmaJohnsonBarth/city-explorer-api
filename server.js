@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5005;
 app.use(cors());
 
 app.get('/', (request, response) => {
-  response.send('Hello from the server!');
+  response.status(200).send('Hello from the server!');
 });
 
 app.get('/weather', (request, response) => {
