@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5005;
 app.use(cors());
 
 app.get('/', (request, response) => {
-  response.send('Hello from the server!');
+  response.status(200).send('Hello from the server!');
 });
 
 app.get('/weather', (request, response) => {
@@ -37,12 +37,13 @@ app.get('/weather', (request, response) => {
       console.log(error);
       response.status(500).send('Error fetching weather data');
     });
-  })
+}
+);
 
 
 
-  // console.log('from JSON: ', weatherDataToInstant);
-  // let dataToSendFE = new Weather(weatherDataToInstant);
+// console.log('from JSON: ', weatherDataToInstant);
+// let dataToSendFE = new Weather(weatherDataToInstant);
 //   try {
 //     let weatherObjects = weatherDataToInstant.data.map((day) => {
 //       return new WeatherForecast(day);
